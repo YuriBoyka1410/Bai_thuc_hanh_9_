@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài thực hành 9</title>
+  </head>
+  <body>
+    <script>
+      const transactions = [150, -50, 200, -10, 500, 15000, -200, 300];
+      //Nhiệm vụ 1: Tính tổng tiền nhận vào (>0)
+      let total_income = 0;
+      for (let i = 0; i < transactions.length; i++) {
+        if (transactions[i] > 0) {
+          total_income += transactions[i];
+        }
+      }
+      console.log("Tổng tiền nhận vào: ", total_income);
+
+      // Nhiệm vụ 2: Tìm giao dịch đáng ngờ (giá trị > 10000)
+      let has_fraud = false;
+      let index = 0;
+      while (index < transactions.length) {
+        if (transactions[index] > 10000) {
+          has_fraud = true;
+          break;
+        }
+        index++;
+      }
+      console.log("Có giao dịch đáng ngờ: ", has_fraud);
+
+      // Nhiệm vụ 3: Gửi báo cáo lên Server, nếu lỗi được thử lại tối đa 3 lần
+      let attempts = 0;
+      let is_success = false;
+
+      do {
+        attempts++;
+        is_success = Math.random() > 0.8;
+        console.log("Lần thử: ", attempts, "| Thành công: ", is_success);
+      } while (!is_success && attempts < 3);
+      console.log("Tổng số lần thử: ", attempts);
+    </script>
+  </body>
+</html>
