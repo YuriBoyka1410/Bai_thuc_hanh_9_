@@ -1,0 +1,34 @@
+TEST CASE 1: Mảng bình thường
+Input:
+[150, -50, 200, -10, 500, 15000, -200, 300]
+
+Output:
+Tổng tiền nhận vào: 16150
+Có giao dịch đáng ngờ: true
+Tổng số lần thử kết nối: 2
+
+
+---------------------------------
+
+TEST CASE 2: Mảng toàn số âm
+
+Input:
+[-100, -200, -300, -400]
+
+Output:
+Tổng tiền nhận vào: 0
+Có giao dịch đáng ngờ: false
+Tổng số lần thử kết nối: 3
+
+
+---------------------------------
+
+TEST CASE 3: Mảng rỗng
+
+Input:
+[]
+
+Output:
+Tổng tiền nhận vào: 0
+Có giao dịch đáng ngờ: false
+Tổng số lần thử kết nối: 1
